@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="auth">
+            <h2>Sign In / Sign Up</h2>
+            <form id="auth-form">
+                <input type="email" id="email" placeholder="Email" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="button" onclick="signup()">Sign Up</button>
+                <button type="button" onclick="signin()">Sign In</button>
+            </form>
+        </div>
+
+        <div id="tracker" style="display:none;">
+            <h2>Attendance Tracker</h2>
+            <form id="tracker-form">
+                <input type="time" id="checkin" placeholder="Check-In Time" required><br>
+                <input type="time" id="checkout" placeholder="Check-Out Time" required><br>
+                <button type="button" onclick="calculateTime()">Calculate Time</button>
+            </form>
+            <h3 id="remaining-time"></h3>
+        </div>
+
+        <div id="upload" style="display:none;">
+            <h2>Upload Attendance</h2>
+            <form id="upload-form">
+                <input type="file" id="file" accept=".xlsx" required><br>
+                <button type="button" onclick="uploadFile()">Upload</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
